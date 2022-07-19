@@ -20,8 +20,6 @@ public class AddNoteFragment extends Fragment {
     private final NoteDbController db_helper = new NoteDbController();
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        new ViewModelProvider(this).get(AddNoteViewModel.class);
-
         binding = FragmentAddNoteBinding.inflate(inflater, container, false);
         binding.saveNote.setOnClickListener(view -> {
             String title = binding.title.getText().toString();

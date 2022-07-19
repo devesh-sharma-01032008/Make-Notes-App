@@ -26,7 +26,6 @@ class NoteViewHolder extends RecyclerView.ViewHolder {
         title = itemView.findViewById(R.id.title_item);
         description = itemView.findViewById(R.id.description_item);
         delete_btn = itemView.findViewById(R.id.delete_btn);
-
     }
 }
 public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
@@ -58,7 +57,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
             NoteDbController db = new NoteDbController();
             db.deleteNote(db_helper,note);
             ArrayList<Note> notes_updated = new ArrayList<>(db.getNotes(db_helper));
-            Log.i("debug", String.valueOf(notes_updated.size()));
             notes.clear();
             notes.addAll(notes_updated);
             notifyItemRemoved(position);

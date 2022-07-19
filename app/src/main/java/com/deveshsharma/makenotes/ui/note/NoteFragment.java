@@ -22,7 +22,6 @@ public class NoteFragment  extends Fragment {
     private FragmentNoteBinding binding;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        new ViewModelProvider(this).get(NoteViewModel.class);
 
         binding = FragmentNoteBinding.inflate(inflater, container, false);
         NoteDbController db = new NoteDbController();
@@ -31,7 +30,6 @@ public class NoteFragment  extends Fragment {
         if(notes.size() >= 1){
             binding.noNotesMsg.setText("");
         }
-        Log.i("debug", String.valueOf(notes.size()));
         NoteAdapter adapter = new NoteAdapter(notes);
         binding.notesView.setAdapter(adapter);
         return binding.getRoot();
