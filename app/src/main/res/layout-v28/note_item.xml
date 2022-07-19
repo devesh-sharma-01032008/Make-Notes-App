@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="10dp"
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/title_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textFontWeight="@integer/material_motion_duration_long_1"
+            android:textFontWeight="800"
             app:layout_constraintBottom_toTopOf="@+id/description_item"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/title"
-            android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="p" />
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/description_item"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:text="@string/description"
-            android:textColor="#0D0D0D"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
